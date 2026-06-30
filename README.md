@@ -13,14 +13,17 @@ We needed to decide which embedding model to use for [rag-ferrite](https://githu
 
 ## Models Tested
 
-| Model | Provider | Dimensions | Cost (per 1M tokens) |
-|-------|----------|------------|---------------------|
-| Qwen3-Embedding-8B @ 512d | OpenRouter | 512 | ~$0.01 |
-| Qwen3-Embedding-8B @ 4096d | OpenRouter | 4096 | ~$0.01 |
-| BGE-M3 | OpenRouter | 1024 | ~$0.01 |
-| Mistral Embed (2312) | OpenRouter | 1024 (native) | ~€0.10 |
+| Model | Model ID | Parameters | Dimensions | Cost (per 1M tokens) |
+|-------|----------|-----------|------------|---------------------|
+| Qwen3-Embedding-8B @ 512d | `qwen/qwen3-embedding-8b` | 8B | 512 (MRL-truncated) | ~$0.01 |
+| Qwen3-Embedding-8B @ 1024d | `qwen/qwen3-embedding-8b` | 8B | 1024 (MRL-truncated) | ~$0.01 |
+| Qwen3-Embedding-8B @ 4096d | `qwen/qwen3-embedding-8b` | 8B | 4096 (full) | ~$0.01 |
+| BGE-M3 | `baai/bge-m3` | ~568M | 1024 (native) | ~$0.01 |
+| Mistral Embed (2312) | `mistralai/mistral-embed-2312` | ~335M | 1024 (native) | ~€0.10 |
 
-All models accessed via [OpenRouter](https://openrouter.ai) API. No local GPU required.
+All models accessed via the **[OpenRouter](https://openrouter.ai)** API (`https://openrouter.ai/api/v1/embeddings`) using a standard `POST` request with `Authorization: Bearer <key>`. No local GPU, no Ollama — everything through the cloud API. The same API key was used for all models to keep conditions identical.
+
+**Note on `dimensions` parameter:** Qwen3-Embedding-8B supports the `dimensions` parameter via Matryoshka Representation Learning (MRL), allowing truncation to 512 or 1024. BGE-M3 and Mistral Embed **do not** support this parameter — they output at their native dimensionality. When `dimensions` is not supported, the parameter is omitted from the API call.
 
 ## Dataset
 
@@ -64,11 +67,40 @@ Full dataset: [`golden_dataset.json`](golden_dataset.json)
 
 No BM25, no reranking — pure embedding quality comparison. This isolates the embedding model's contribution.
 
-## Metrics
+## Metrics Explained
 
-- **Hit Rate @5**: Percentage of queries where the correct document appears in the top 5 results by cosine similarity. Measures recall.
-- **MRR (Mean Reciprocal Rank)**: Average of `1/rank` across all queries. A perfect score (all rank 1) = 1.0. Measures how high the correct result ranks.
-- **Embed Time**: Wall-clock time to embed all 59 chunks. Measures ingestion speed.
+### Hit Rate @5
+
+**What it means:** Out of 30 queries, how often did the *correct* document appear somewhere in the top 5 results?
+
+**Why it matters:** In a RAG system, you typically retrieve 5-10 chunks and feed them to the LLM. If the right chunk isn't in those top 5, the LLM won't have the information it needs. Hit Rate measures **recall** — does the model find the needle at all?
+
+**Example:** 100% means the correct document was always in the top 5. 96.7% means it missed once.
+
+### MRR (Mean Reciprocal Rank)
+
+**What it means:** The average of `1/rank` for each query, where `rank` is the position of the correct document in the results (1 = first result, 2 = second, etc.).
+
+**Why it matters:** Hit Rate tells you if the right answer is *somewhere* in the top 5. MRR tells you if it's at the **top**. In practice, users (and LLMs) pay more attention to the first results. A model with MRR 0.84 puts the right answer at rank 1 most of the time. A model with MRR 0.74 might bury it at rank 3-4.
+
+**Concrete example:**
+- All 30 queries return the correct doc at rank 1 → MRR = 1.0 (perfect)
+- Correct doc always at rank 2 → MRR = 0.5
+- Correct doc always at rank 5 → MRR = 0.2
+
+**Scale:** MRR ranges from 0 to 1. Above 0.75 is good. Above 0.80 is excellent.
+
+### Embed Time
+
+**What it means:** Wall-clock time to embed all 59 document chunks (queries are negligible — 1 embedding each).
+
+**Why it matters:** For ingestion of large corpora (thousands of documents), embedding speed directly determines how long a rebuild takes. A model that's 10x slower means 10x longer ingestion.
+
+### Cosine Similarity
+
+**What it means:** The mathematical measure used to rank documents against a query. It computes the cosine of the angle between two vectors — 1.0 means identical direction, 0.0 means orthogonal (unrelated).
+
+**Why no raw scores in the results:** Cosine similarity scores are **not comparable across models** (each model has its own scale). Only the **ranking** (which document comes first) is comparable. That's why we use Hit Rate and MRR, not raw similarity scores.
 
 ## Results
 
