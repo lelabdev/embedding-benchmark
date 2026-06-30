@@ -1,0 +1,13 @@
+{
+  "model": "nomic-embed",
+  "model_id": "nomic-ai/nomic-embed-text-v1.5",
+  "dimensions": null,
+  "total_chunks": 59,
+  "valid_embeddings": 0,
+  "total_queries": 0,
+  "hit_rate": 0,
+  "mrr": 0,
+  "embed_time_s": 4.0,
+  "total_chars_embedded": 0,
+  "per_query": []
+}

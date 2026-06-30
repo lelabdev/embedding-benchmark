@@ -1,0 +1,254 @@
+{
+  "model": "qwen3-8b-1024",
+  "model_id": "qwen/qwen3-embedding-8b",
+  "dimensions": 1024,
+  "total_chunks": 59,
+  "valid_embeddings": 59,
+  "total_queries": 30,
+  "hit_rate": 1.0,
+  "mrr": 0.75,
+  "embed_time_s": 298.4,
+  "total_chars_embedded": 32436,
+  "per_query": [
+    {
+      "question": "Quelle est la capitale du Japon ?",
+      "expected_source": "tokyo_fr",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "tokyo_fr",
+      "top1_sim": 0.6521
+    },
+    {
+      "question": "What is raw fish on rice called?",
+      "expected_source": "sushi_en",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "sushi_en",
+      "top1_sim": 0.6394
+    },
+    {
+      "question": "日本の最高峰の山は？",
+      "expected_source": "mount_fuji_ja",
+      "rank": 2,
+      "hit": true,
+      "top1_source": "mount_fuji_fr",
+      "top1_sim": 0.7011
+    },
+    {
+      "question": "What caused the massive waves in 2011?",
+      "expected_source": "tsunami_en",
+      "rank": 3,
+      "hit": true,
+      "top1_source": "tsunami_ja",
+      "top1_sim": 0.648
+    },
+    {
+      "question": "Qu'est-ce que le shodō ?",
+      "expected_source": "calligraphy_fr",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "calligraphy_fr",
+      "top1_sim": 0.7343
+    },
+    {
+      "question": "Japanese animated films and shows",
+      "expected_source": "anime_en",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "anime_en",
+      "top1_sim": 0.6666
+    },
+    {
+      "question": "漫画とは何ですか",
+      "expected_source": "manga_ja",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "manga_ja",
+      "top1_sim": 0.6469
+    },
+    {
+      "question": "Who were the warrior class in feudal Japan?",
+      "expected_source": "samurai_en",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "samurai_en",
+      "top1_sim": 0.6919
+    },
+    {
+      "question": "Qu'est-ce que la cérémonie du thé ?",
+      "expected_source": "tea_ceremony_fr",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "tea_ceremony_fr",
+      "top1_sim": 0.7593
+    },
+    {
+      "question": "Tell me about Japanese Buddhism",
+      "expected_source": "buddhism_en",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "buddhism_en",
+      "top1_sim": 0.5724
+    },
+    {
+      "question": "東京の人口はどれくらいですか",
+      "expected_source": "tokyo_ja",
+      "rank": 3,
+      "hit": true,
+      "top1_source": "tokyo_fr",
+      "top1_sim": 0.6673
+    },
+    {
+      "question": "How is sushi traditionally made?",
+      "expected_source": "sushi_fr",
+      "rank": 2,
+      "hit": true,
+      "top1_source": "sushi_en",
+      "top1_sim": 0.695
+    },
+    {
+      "question": "What is the significance of Mount Fuji?",
+      "expected_source": "mount_fuji_en",
+      "rank": 2,
+      "hit": true,
+      "top1_source": "mount_fuji_fr",
+      "top1_sim": 0.7016
+    },
+    {
+      "question": "Le bouddhisme au Japon",
+      "expected_source": "buddhism_fr",
+      "rank": 2,
+      "hit": true,
+      "top1_source": "calligraphy_fr",
+      "top1_sim": 0.5693
+    },
+    {
+      "question": "侍の歴史について",
+      "expected_source": "samurai_ja",
+      "rank": 2,
+      "hit": true,
+      "top1_source": "calligraphy_fr",
+      "top1_sim": 0.5325
+    },
+    {
+      "question": "What is Japanese tea ceremony about?",
+      "expected_source": "tea_ceremony_en",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "tea_ceremony_en",
+      "top1_sim": 0.7573
+    },
+    {
+      "question": "寿司の種類について",
+      "expected_source": "sushi_ja",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "sushi_ja",
+      "top1_sim": 0.5802
+    },
+    {
+      "question": "How big are tsunamis?",
+      "expected_source": "tsunami_fr",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "tsunami_fr",
+      "top1_sim": 0.6058
+    },
+    {
+      "question": "茶道の作法とは",
+      "expected_source": "tea_ceremony_ja",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "tea_ceremony_ja",
+      "top1_sim": 0.6346
+    },
+    {
+      "question": "Fuji volcano eruption history",
+      "expected_source": "mount_fuji_ja",
+      "rank": 3,
+      "hit": true,
+      "top1_source": "mount_fuji_fr",
+      "top1_sim": 0.7182
+    },
+    {
+      "question": "What anime series are popular?",
+      "expected_source": "anime_fr",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "anime_fr",
+      "top1_sim": 0.5543
+    },
+    {
+      "question": "日本のアニメ産業",
+      "expected_source": "anime_ja",
+      "rank": 3,
+      "hit": true,
+      "top1_source": "anime_en",
+      "top1_sim": 0.6076
+    },
+    {
+      "question": "Shodo calligraphy tools brush ink",
+      "expected_source": "calligraphy_en",
+      "rank": 3,
+      "hit": true,
+      "top1_source": "calligraphy_fr",
+      "top1_sim": 0.6077
+    },
+    {
+      "question": "Manga vs anime difference",
+      "expected_source": "manga_fr",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "manga_fr",
+      "top1_sim": 0.6767
+    },
+    {
+      "question": "仏教の教えとは",
+      "expected_source": "buddhism_ja",
+      "rank": 2,
+      "hit": true,
+      "top1_source": "buddhism_en",
+      "top1_sim": 0.5714
+    },
+    {
+      "question": "Tsunami warning signs",
+      "expected_source": "tsunami_ja",
+      "rank": 3,
+      "hit": true,
+      "top1_source": "tsunami_fr",
+      "top1_sim": 0.6219
+    },
+    {
+      "question": "書道の歴史と道具",
+      "expected_source": "calligraphy_ja",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "calligraphy_ja",
+      "top1_sim": 0.637
+    },
+    {
+      "question": "Tokyo metropolitan area population",
+      "expected_source": "tokyo_en",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "tokyo_en",
+      "top1_sim": 0.7696
+    },
+    {
+      "question": "Samurai code of honor bushido",
+      "expected_source": "samurai_fr",
+      "rank": 2,
+      "hit": true,
+      "top1_source": "samurai_en",
+      "top1_sim": 0.5725
+    },
+    {
+      "question": "富士山の高さは何メートル",
+      "expected_source": "mount_fuji_fr",
+      "rank": 1,
+      "hit": true,
+      "top1_source": "mount_fuji_fr",
+      "top1_sim": 0.6485
+    }
+  ]
+}

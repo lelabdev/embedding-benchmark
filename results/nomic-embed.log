@@ -1,0 +1,106 @@
+Loaded 59 chunks from 30 documents
+Loaded 30 queries
+
+============================================================
+Model: nomic-embed (nomic-ai/nomic-embed-text-v1.5)
+Dims: None
+============================================================
+
+Embedding 59 chunks...
+  FAIL chunk anime_en_0: HTTP Error 400: Bad Request
+  FAIL chunk anime_fr_0: HTTP Error 400: Bad Request
+  FAIL chunk anime_ja_0: HTTP Error 400: Bad Request
+  FAIL chunk buddhism_en_0: HTTP Error 400: Bad Request
+  FAIL chunk buddhism_fr_0: HTTP Error 400: Bad Request
+  FAIL chunk buddhism_ja_0: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_en_0: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_en_1: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_en_2: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_fr_0: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_fr_1: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_fr_2: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_ja_0: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_ja_1: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_ja_2: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_ja_3: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_ja_4: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_ja_5: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_ja_6: HTTP Error 400: Bad Request
+  FAIL chunk calligraphy_ja_7: HTTP Error 400: Bad Request
+  FAIL chunk manga_en_0: HTTP Error 400: Bad Request
+  FAIL chunk manga_fr_0: HTTP Error 400: Bad Request
+  FAIL chunk manga_ja_0: HTTP Error 400: Bad Request
+  FAIL chunk manga_ja_1: HTTP Error 400: Bad Request
+  FAIL chunk manga_ja_2: HTTP Error 400: Bad Request
+  FAIL chunk manga_ja_3: HTTP Error 400: Bad Request
+  FAIL chunk manga_ja_4: HTTP Error 400: Bad Request
+  FAIL chunk manga_ja_5: HTTP Error 400: Bad Request
+  FAIL chunk mount_fuji_en_0: HTTP Error 400: Bad Request
+  FAIL chunk mount_fuji_fr_0: HTTP Error 400: Bad Request
+  FAIL chunk mount_fuji_ja_0: HTTP Error 400: Bad Request
+  FAIL chunk samurai_en_0: HTTP Error 400: Bad Request
+  FAIL chunk samurai_fr_0: HTTP Error 400: Bad Request
+  FAIL chunk samurai_ja_0: HTTP Error 400: Bad Request
+  FAIL chunk samurai_ja_1: HTTP Error 400: Bad Request
+  FAIL chunk samurai_ja_2: HTTP Error 400: Bad Request
+  FAIL chunk samurai_ja_3: HTTP Error 400: Bad Request
+  FAIL chunk sushi_en_0: HTTP Error 400: Bad Request
+  FAIL chunk sushi_fr_0: HTTP Error 400: Bad Request
+  FAIL chunk sushi_ja_0: HTTP Error 400: Bad Request
+  FAIL chunk sushi_ja_1: HTTP Error 400: Bad Request
+  FAIL chunk sushi_ja_2: HTTP Error 400: Bad Request
+  FAIL chunk sushi_ja_3: HTTP Error 400: Bad Request
+  FAIL chunk sushi_ja_4: HTTP Error 400: Bad Request
+  FAIL chunk tea_ceremony_en_0: HTTP Error 400: Bad Request
+  FAIL chunk tea_ceremony_fr_0: HTTP Error 400: Bad Request
+  FAIL chunk tea_ceremony_ja_0: HTTP Error 400: Bad Request
+  FAIL chunk tokyo_en_0: HTTP Error 400: Bad Request
+  FAIL chunk tokyo_fr_0: HTTP Error 400: Bad Request
+  FAIL chunk tokyo_ja_0: HTTP Error 400: Bad Request
+  FAIL chunk tokyo_ja_1: HTTP Error 400: Bad Request
+  FAIL chunk tokyo_ja_2: HTTP Error 400: Bad Request
+  FAIL chunk tokyo_ja_3: HTTP Error 400: Bad Request
+  FAIL chunk tokyo_ja_4: HTTP Error 400: Bad Request
+  FAIL chunk tokyo_ja_5: HTTP Error 400: Bad Request
+  FAIL chunk tokyo_ja_6: HTTP Error 400: Bad Request
+  FAIL chunk tsunami_en_0: HTTP Error 400: Bad Request
+  FAIL chunk tsunami_fr_0: HTTP Error 400: Bad Request
+  FAIL chunk tsunami_ja_0: HTTP Error 400: Bad Request
+  Done: 0/59 chunks in 4.0s
+
+Running 30 queries...
+  FAIL query: Quelle est la capitale du Japon ?... — HTTP Error 400: Bad Request
+  FAIL query: What is raw fish on rice called?... — HTTP Error 400: Bad Request
+  FAIL query: 日本の最高峰の山は？... — HTTP Error 400: Bad Request
+  FAIL query: What caused the massive waves in 2011?... — HTTP Error 400: Bad Request
+  FAIL query: Qu'est-ce que le shodō ?... — HTTP Error 400: Bad Request
+  FAIL query: Japanese animated films and shows... — HTTP Error 400: Bad Request
+  FAIL query: 漫画とは何ですか... — HTTP Error 400: Bad Request
+  FAIL query: Who were the warrior class in feudal Jap... — HTTP Error 400: Bad Request
+  FAIL query: Qu'est-ce que la cérémonie du thé ?... — HTTP Error 400: Bad Request
+  FAIL query: Tell me about Japanese Buddhism... — HTTP Error 400: Bad Request
+  FAIL query: 東京の人口はどれくらいですか... — HTTP Error 400: Bad Request
+  FAIL query: How is sushi traditionally made?... — HTTP Error 400: Bad Request
+  FAIL query: What is the significance of Mount Fuji?... — HTTP Error 400: Bad Request
+  FAIL query: Le bouddhisme au Japon... — HTTP Error 400: Bad Request
+  FAIL query: 侍の歴史について... — HTTP Error 400: Bad Request
+  FAIL query: What is Japanese tea ceremony about?... — HTTP Error 400: Bad Request
+  FAIL query: 寿司の種類について... — HTTP Error 400: Bad Request
+  FAIL query: How big are tsunamis?... — HTTP Error 400: Bad Request
+  FAIL query: 茶道の作法とは... — HTTP Error 400: Bad Request
+  FAIL query: Fuji volcano eruption history... — HTTP Error 400: Bad Request
+  FAIL query: What anime series are popular?... — HTTP Error 400: Bad Request
+  FAIL query: 日本のアニメ産業... — HTTP Error 400: Bad Request
+  FAIL query: Shodo calligraphy tools brush ink... — HTTP Error 400: Bad Request
+  FAIL query: Manga vs anime difference... — HTTP Error 400: Bad Request
+  FAIL query: 仏教の教えとは... — HTTP Error 400: Bad Request
+  FAIL query: Tsunami warning signs... — HTTP Error 400: Bad Request
+  FAIL query: 書道の歴史と道具... — HTTP Error 400: Bad Request
+  FAIL query: Tokyo metropolitan area population... — HTTP Error 400: Bad Request
+  FAIL query: Samurai code of honor bushido... — HTTP Error 400: Bad Request
+  FAIL query: 富士山の高さは何メートル... — HTTP Error 400: Bad Request
+
+  ── Results ──
+  Hit Rate @5: 0.0% (0/0)
+  MRR: 0.0000
+  Embed time: 4.0s

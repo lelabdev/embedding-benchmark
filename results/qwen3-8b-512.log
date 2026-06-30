@@ -1,0 +1,58 @@
+Loaded 59 chunks from 30 documents
+Loaded 30 queries
+
+============================================================
+Model: qwen3-8b-512 (qwen/qwen3-embedding-8b)
+Dims: 512
+============================================================
+
+Embedding 59 chunks...
+  5/59 chunks embedded
+  10/59 chunks embedded
+  15/59 chunks embedded
+  20/59 chunks embedded
+  25/59 chunks embedded
+  30/59 chunks embedded
+  35/59 chunks embedded
+  40/59 chunks embedded
+  45/59 chunks embedded
+  50/59 chunks embedded
+  55/59 chunks embedded
+  Done: 59/59 chunks in 212.4s
+
+Running 30 queries...
+  ✓ rank 1 | Quelle est la capitale du Japon ?
+  ✓ rank 1 | What is raw fish on rice called?
+  ✓ rank 2 | 日本の最高峰の山は？
+  ✓ rank 2 | What caused the massive waves in 2011?
+  ✓ rank 1 | Qu'est-ce que le shodō ?
+  ✓ rank 1 | Japanese animated films and shows
+  ✓ rank 2 | 漫画とは何ですか
+  ✓ rank 1 | Who were the warrior class in feudal Japan?
+  ✓ rank 1 | Qu'est-ce que la cérémonie du thé ?
+  ✓ rank 1 | Tell me about Japanese Buddhism
+  ✓ rank 3 | 東京の人口はどれくらいですか
+  ✓ rank 2 | How is sushi traditionally made?
+  ✓ rank 2 | What is the significance of Mount Fuji?
+  ✓ rank 1 | Le bouddhisme au Japon
+  ✓ rank 2 | 侍の歴史について
+  ✓ rank 1 | What is Japanese tea ceremony about?
+  ✓ rank 1 | 寿司の種類について
+  ✓ rank 1 | How big are tsunamis?
+  ✓ rank 2 | 茶道の作法とは
+  ✓ rank 3 | Fuji volcano eruption history
+  ✓ rank 1 | What anime series are popular?
+  ✓ rank 4 | 日本のアニメ産業
+  ✓ rank 3 | Shodo calligraphy tools brush ink
+  ✓ rank 1 | Manga vs anime difference
+  ✓ rank 2 | 仏教の教えとは
+  ✓ rank 3 | Tsunami warning signs
+  ✓ rank 1 | 書道の歴史と道具
+  ✓ rank 1 | Tokyo metropolitan area population
+  ✓ rank 2 | Samurai code of honor bushido
+  ✓ rank 1 | 富士山の高さは何メートル
+
+  ── Results ──
+  Hit Rate @5: 100.0% (30/30)
+  MRR: 0.7361
+  Embed time: 212.4s
