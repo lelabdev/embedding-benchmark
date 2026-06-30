@@ -104,6 +104,8 @@ No BM25, no reranking — pure embedding quality comparison. This isolates the e
 
 ## Results
 
+### Overall
+
 | Model | Hit Rate @5 | MRR | Embed Time | Dims |
 |-------|-------------|-----|------------|------|
 | **Mistral Embed 2312** | **100.0%** (30/30) | **0.836** | **20.3s** | 1024 |
@@ -111,6 +113,25 @@ No BM25, no reranking — pure embedding quality comparison. This isolates the e
 | **Qwen3-8B @ 1024d** | **100.0%** (30/30) | 0.750 | 298.4s | 1024 |
 | **Qwen3-8B @ 512d** | **100.0%** (30/30) | 0.736 | 212.4s | 512 |
 | **Qwen3-8B @ 4096d** | **100.0%** (30/30) | 0.739 | 263.7s | 4096 |
+
+### By Language
+
+Query distribution: 4 French, 16 English, 10 Japanese.
+
+| Model | FR MRR | EN MRR | JA MRR | FR Hit | EN Hit | JA Hit |
+|-------|--------|--------|--------|--------|--------|--------|
+| **Mistral Embed** | **1.000** | 0.724 | **0.950** | 100% | 100% | 100% |
+| BGE-M3 | 0.875 | 0.714 | 0.900 | 100% | 94% | 100% |
+| **Qwen3-8B @ 512d** | **1.000** | 0.750 | 0.608 | 100% | 100% | 100% |
+| Qwen3-8B @ 1024d | 0.875 | 0.740 | 0.717 | 100% | 100% | 100% |
+| Qwen3-8B @ 4096d | 0.875 | **0.760** | 0.650 | 100% | 100% | 100% |
+
+**Best model per language:**
+- 🇫🇷 **French:** Mistral Embed / Qwen3-8B @ 512d (tied at MRR 1.000)
+- 🇬🇧 **English:** Qwen3-8B @ 4096d (MRR 0.760) — but Qwen3 @ 512d is very close (0.750)
+- 🇯🇵 **Japanese:** Mistral Embed (MRR 0.950) — clear winner
+
+**Note:** The French query count (4) is small. Results for FR should be treated as indicative, not statistically significant. The dataset is intentionally Japanese-culture-focused, which skews the language distribution.
 
 ### Key Findings
 
